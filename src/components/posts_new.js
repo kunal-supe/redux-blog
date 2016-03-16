@@ -25,8 +25,8 @@ class PostsNew extends Component {
     const { fields: { title, categories, content }, handleSubmit } = this.props;
 
     return (
-      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-        <h3>Create a anew post </h3>
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))>
+        <h3>Create a new post </h3>
 
         <div className={`form-group ${title.touched && title.invalid ? 'has-danger' : ''}`}>
           <label>Title</label>

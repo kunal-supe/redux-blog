@@ -10,11 +10,17 @@ class PostsShow extends Component {
 
   componentWillMount() {
     this.props.fetchPost(this.props.params.id);
+    this.state = { notice: '' };
   }
 
   onDeleteClick() {
+    this.setState({ notice: 'Your posts is deleted' });
     this.props.deletePost(this.props.params.id)
-      .then(() => { this.context.router.push('/'); });
+      .then(() => { this.context.router.push({
+        pathname: '/'
+      })
+    });
+
   }
 
   render() {
